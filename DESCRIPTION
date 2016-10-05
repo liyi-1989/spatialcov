@@ -1,0 +1,10 @@
+Package: spatialcov
+Type: Package
+Title: Double Tapering Estimator for Block Bandable Spatial Covariance
+Version: 0.1.0
+Author: Yi Li
+Maintainer: Yi Li <liyi.1989@gmail.com>
+Description: This package implement the double tapering estimator for block bandable spatial covariance.
+License: MIT + file LICENSE
+LazyData: TRUE
+Imports: MASS
