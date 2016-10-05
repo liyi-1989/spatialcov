@@ -28,8 +28,8 @@
 #'    S=doubleblock(p1,p2,M,a,a)
 #'    data = mvrnorm(n, mu = rep(0,p), Sigma = S)
 #'    S_hat=cov(data)
-#'    S_band=doubeltaper(S_hat,p1,p2,ck,cl,a,a,n,method="banding",Axis=0)
-#'    S_taper=doubeltaper(S_hat,p1,p2,ck,cl,a,a,n,method="tapering",Axis=0)
+#'    S_band=doubletaper(S_hat,p1,p2,ck,cl,a,a,n,method="banding",Axis=0)
+#'    S_taper=doubletaper(S_hat,p1,p2,ck,cl,a,a,n,method="tapering",Axis=0)
 #'
 #'    err_hat[i]=sqrt(sum((S_hat-S)^2))
 #'    err_band[i]=sqrt(sum((S_band-S)^2))
@@ -43,7 +43,7 @@
 #'         lty=rep(1,3),pch=rep(1,3),cex=0.5)
 #'  @export
 
-doubeltaper=function(S,p1,p2,k,l,ck=1,cl=1,a=1.3,b=1.3,n=1000,method="tapering",Axis=0){
+doubletaper=function(S,p1,p2,k,l,ck=1,cl=1,a=1.3,b=1.3,n=1000,method="tapering",Axis=0){
   # Input: a covariance matrix S with dimension p=p1p2,
   # based on spatial data X n*p=n*p1*p2
   # Output: S_hat
